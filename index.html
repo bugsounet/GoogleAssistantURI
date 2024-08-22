@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="config.css" />
+    <title>@bugsounet Consent OAuth screen ~ Code Reader</title>
+    <script type="text/javascript">
+      function getParameterByName(name) {
+          url = window.location.href;
+
+          name = name.replace(/[\[\]]/g, "\\$&");
+          var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)");
+          var results = regex.exec(url);
+          if (!results) return null;
+          if (!results[2]) return '';
+          return decodeURIComponent(results[2].replace(/\+/g, " "));
+      }
+
+      document.addEventListener("DOMContentLoaded", function(event) {
+        var code = getParameterByName('code');
+        var scope = getParameterByName('scope');
+        var scopeURLs = [
+          "https://www.googleapis.com/auth/assistant-sdk-prototype",
+          "https://www.googleapis.com/auth/youtube",
+          "https://www.googleapis.com/auth/photoslibrary https://www.googleapis.com/auth/photoslibrary.sharing",
+          "https://www.googleapis.com/auth/photoslibrary.sharing https://www.googleapis.com/auth/photoslibrary"
+        ]
+        var request= document.getElementById('request')
+        if (code && scopeURLs.indexOf(scope) > -1) {
+          request.style.display = "none";
+          document.getElementById('code').innerHTML= "Your code:<br>" + code;
+        }
+      });
+    </script>
+  </head>  
+  <body>
+    <div class="text">
+      <h1><img class="google_icon" src="google.gif" >Consent OAuth screen</h1>
+      <div>
+        <h2><img class="logo" src="logo.png" ></h2>
+      </div>
+      <div class="backgroundform" id= "request">
+        <div id= "uri"></div>
+        <div>
+          <p>NO CODE FOUND!<br>
+        </div>
+        <div>
+          <p><br>Oupps, an error was happen.<br>We can't determinate your code.</p>
+        </div>
+        <div>
+          <p>You can get support in <a class="link" href="https://forum.bugsounet.fr">4th Party modules</a></p>
+        </div>
+      </div>
+      <div class="returncode" id="code"></div>
+    </div>
+    <footer class="footer">
+      <p>Designed by @2hdlockness ~ ©bugsounet.fr 2022 ~</p>
+    </footer>
+  </body>
+</html>
+

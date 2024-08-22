@@ -1,0 +1,119 @@
+body {
+  background-image: url('./background.gif');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.text {
+  color:#fff;
+  min-height: calc(100vh - 50px);
+}
+
+.link {
+  color: dodgerblue;
+}
+
+.google_icon {
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+}
+
+.logo {
+  position: relative;	
+  left: 50%;
+  transform: translate(-50%, 10%); 
+}
+
+
+/*
+  titre
+*/
+	
+h1 {
+  text-align:left;
+  margin: 0.3em auto 0.5em auto;
+  font-weight: 600;
+  font-family: 'Titillium Web', sans-serif;
+  position: relative;
+  top: 30px;
+  width:490px;
+  font-size: 36px;
+  line-height: 20px;
+  padding: 10px 10px 10px 1%;
+  color: #4885ed;
+  box-shadow: 0 0 50px #FFF;
+  border-radius: 50px 50px 50px 50px;
+  background:#FFF url('backgroundtitle.jpg') no-repeat center right;
+}
+
+.footer {
+  display:block;
+  text-align:center;
+  height: 10px;
+  color: #FFF;
+}
+
+.backgroundform {
+  font-weight:bold;
+  color:#db3236;	
+  text-align:center;
+  left: 50%;
+  transform: translate(-50%, 20%); 
+  position: relative;
+  width:640px;
+  line-height: 20px;
+  border-radius: 500px 500px 500px 500px;
+  background:#FFF;
+  opacity:0.8;
+  border: 0.2rem solid #FFF;
+  box-shadow:
+    0 0 .5rem #4885ed,
+    inset 0 0 .5rem #4885ed,
+    0 0 2rem #08f,
+    inset 0 0 2rem #4885ed,
+    0 0 4rem #08f,
+    inset 0 0 4rem #f4c20d;
+}
+
+
+.returncode {
+  position: relative;
+  top: 150px;
+  text-align:center;
+  width:740px;
+  line-height: 30px;
+  font-size: 17px;
+  font-weight:normal;
+  color: #000;
+  margin: 2em auto 2em auto;
+  border-radius: 500px 500px 500px 500px;
+  -webkit-animation: glow 1.5s ease-in-out infinite alternate;
+  -moz-animation: glow 1.5s ease-in-out infinite alternate;
+  animation: glow 1.5s ease-in-out infinite alternate;
+  background-color:#FFF;
+  opacity:0.7;
+  box-shadow: 
+  -20px -20px 25px -10px #db3236,
+  20px -20px 25px -10px #3cba54,
+  -20px 20px 25px -10px #f4c20d,
+  20px 20px 25px -10px #4885ed;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #adfeff, 0 0 4px #adfeff, 0 0 5px xyan, 0 0 6px #adfeff, 0 0 7px #adfeff;
+  }
+
+  to {
+    text-shadow: 0 0 2px #fff, 0 0 3px #adfeff, 0 0 4px #adfeff, 0 0 5px #adfeff, 0 0 6px #adfeff, 0 0 7px #adfeff, 0 0 8px #adfeff;
+  }
+}
